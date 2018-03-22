@@ -33,4 +33,19 @@ class NYTimesArticlesTests: XCTestCase {
         }
     }
     
+    // MARK: - API Test
+    func testArticleListApi() {
+        // Create an expectation for the task.
+        let expectationAPISuccess = expectation(description: "API Success")
+        NYTRequestCoordinator.coordinator.getMostPopularArticles(withSuccess: { (response) in
+            debugPrint("Success")
+            // Fulfill the expectation to indicate that the task has finished successfully.
+            expectationAPISuccess.fulfill()
+        }, andFailure: { (error) in
+            _ = expectationAPISuccess.isInverted
+            XCTAssert(true, "API Call Failed")
+        })
+        // Wait until the expectation is fulfilled, with a timeout of 30 seconds.
+        waitForExpectations(timeout: 30, handler: nil)
+    }
 }
