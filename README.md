@@ -14,7 +14,7 @@ Swift 3.1+
 - Install Xcode 9.1 or later
 - open the "NYTimesArticles.xcworkspace" on Xcode
 - Choose any simulator from the list
-![Choose Device](https://github.com/dasSoumen/ArticleList/master/ScreenShot/chooseDevice.png?raw=true "Choose Device")
+![Screenshot](/ScreenShot/chooseDevice.png)
 - Hit the Play button
 
 In case of running the code on a real device,
