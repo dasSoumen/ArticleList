@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lA5-QW-Bii" customClass="NYTToast" customModule="NYTimesArticles" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40d-Tg-3xa">
+                    <rect key="frame" x="145.5" y="5" width="84" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1k-xq-B88">
+                            <rect key="frame" x="10" y="5" width="37" height="30"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xh7-Y7-jhd">
+                            <rect key="frame" x="59" y="9.5" width="20" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="bQc-pN-sXF"/>
+                            </constraints>
+                            <state key="normal" image="Close">
+                                <color key="titleColor" red="0.96470588239999999" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="buttonCrossTapped:" destination="lA5-QW-Bii" eventType="touchUpInside" id="QII-ha-ngV"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSg-cV-MPK">
+                            <rect key="frame" x="54" y="5" width="1" height="30"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="I50-Eq-2VW"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.27674412727355957" green="0.89409565925598145" blue="0.76005369424819946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Xh7-Y7-jhd" firstAttribute="leading" secondItem="N1k-xq-B88" secondAttribute="trailing" constant="12" id="14O-aY-0Oq"/>
+                        <constraint firstItem="mSg-cV-MPK" firstAttribute="centerY" secondItem="N1k-xq-B88" secondAttribute="centerY" id="8mP-zQ-uzb"/>
+                        <constraint firstAttribute="bottom" secondItem="N1k-xq-B88" secondAttribute="bottom" constant="5" id="AtA-cV-S38"/>
+                        <constraint firstAttribute="trailing" secondItem="Xh7-Y7-jhd" secondAttribute="trailing" constant="5" id="B1B-gq-UMf"/>
+                        <constraint firstItem="Xh7-Y7-jhd" firstAttribute="leading" secondItem="mSg-cV-MPK" secondAttribute="trailing" constant="4" id="Edb-Ma-aN7"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="TUM-92-SnH"/>
+                        <constraint firstItem="mSg-cV-MPK" firstAttribute="height" secondItem="N1k-xq-B88" secondAttribute="height" id="UI3-FY-vB3"/>
+                        <constraint firstItem="Xh7-Y7-jhd" firstAttribute="centerY" secondItem="N1k-xq-B88" secondAttribute="centerY" id="bW1-Hy-Nmx"/>
+                        <constraint firstItem="N1k-xq-B88" firstAttribute="leading" secondItem="40d-Tg-3xa" secondAttribute="leading" constant="10" id="eyu-mr-nUF"/>
+                        <constraint firstItem="N1k-xq-B88" firstAttribute="top" secondItem="40d-Tg-3xa" secondAttribute="top" constant="5" id="gvL-Bi-2h2"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="40d-Tg-3xa" firstAttribute="centerY" secondItem="lA5-QW-Bii" secondAttribute="centerY" id="18e-pk-Xq9"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="40d-Tg-3xa" secondAttribute="trailing" constant="5" id="CB2-2i-SUv"/>
+                <constraint firstItem="40d-Tg-3xa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lA5-QW-Bii" secondAttribute="leading" constant="5" id="MUW-fy-9lV"/>
+                <constraint firstAttribute="bottom" secondItem="40d-Tg-3xa" secondAttribute="bottom" constant="5" id="VBO-AN-F8A"/>
+                <constraint firstItem="40d-Tg-3xa" firstAttribute="centerX" secondItem="lA5-QW-Bii" secondAttribute="centerX" id="Xez-Af-W0T"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="ckf-FJ-50m"/>
+            <connections>
+                <outlet property="contentView" destination="40d-Tg-3xa" id="0V3-vy-a7a"/>
+                <outlet property="labelToast" destination="N1k-xq-B88" id="Bji-03-X70"/>
+            </connections>
+            <point key="canvasLocation" x="24.5" y="53"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Close" width="20" height="20"/>
+    </resources>
+</document>
