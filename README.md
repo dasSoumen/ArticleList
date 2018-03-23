@@ -1,13 +1,13 @@
-# Project Title
+# NYTimesArticles
 
 This app hit the NY Times Most Popular Articles API and show a list of articles, that show details when items on the list are tapped.
 
 ### Prerequisites
 
-iOS 9.1+
-macOS 10.12+
-XCode 9.1+
-Swift 3.1+
+- iOS 9.1+
+- macOS 10.12+
+- XCode 9.1+
+- Swift 3.1+
 
 ## Running the code
 
